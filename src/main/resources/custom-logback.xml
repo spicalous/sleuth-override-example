@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+   <include resource="custom-base.xml"/>
+   <include resource="custom-file.xml"/>
+   <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+   <root level="INFO">
+      <appender-ref ref="ASYNC"/>
+      <appender-ref ref="CONSOLE"/>
+   </root>
+</configuration>

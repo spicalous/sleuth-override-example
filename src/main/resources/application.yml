@@ -1,0 +1,11 @@
+logging.config: classpath:custom-logback.xml
+
+server:
+  tomcat:
+    basedir: ./embeddedTomcat
+    accesslog:
+      enabled: true
+      pattern: '%a [%{dd/MMM/y:HH:mm:ss.SSS Z]}t %T %B {%{org.apache.catalina.AccessLog.RemoteAddr}r} %m %U %s [traceId=%{traceId}r] [spanId=%{spanId}r]'
+      prefix: access
+      request-attributes-enabled: true
+      file-date-format:
